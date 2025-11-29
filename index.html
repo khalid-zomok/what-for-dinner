@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="Css/bootstrap.min.css" />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="Css/all.min.css" />
+    <!-- main style -->
+    <link rel="stylesheet" href="Css/style.css" />
+    <!-- media style -->
+    <link rel="stylesheet" href="Css/media.css" />
+</head>
+
+<body>
+    <header class="shadow bg-white d-flex justify-content-between align-items-center p-3">
+        <div class="header-content d-flex justify-content-between align-items-center ">
+            <i class="fa-solid fa-utensils fs-4 bg-danger text-white rounded-circle p-3"></i>
+            <div class="px-3 text-start">
+                <h4 class="m-0 fw-bolder">What's For Dinner</h4>
+                <p class="text-secondary m-0 fw-bolder fs-6">Your daily meal inspiration</p>
+            </div>
+        </div>
+        <div class="header-icon d-flex gap-3 justify-content-center align-items-center text-end">
+            <i class="fa-solid fa-bookmark fs-4 "></i>
+            <i class="fa-solid fa-clock-rotate-left fs-4 "></i>
+            <i class="fa-solid fa-gear fs-4 "></i>
+            <div class="picture-container rounded-circle object-fit-contain">
+                <img src="./images/prof-3.jpg"
+                    class="rounded-circle img-thumbnail border border-2 border-danger" alt="user-picture">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container-fluid py-3">
+            <div class="row px-2 m-3">
+                <div
+                   id="meal-picture" class="meal-picture col-lg-5 col-sm-12  rounded-start-4 p-3 d-flex flex-column justify-content-between">
+                    <div class=" align-self-start rounded-pill bg-white d-inline-block text-dark fw-bolder p-2 mb-2"><i
+                            class="fa-solid fa-star text-warning pe-2"></i><span id="meal-rating"> 4.6</span> <span
+                            class="text-secondary fw-lighter fs-6" id="meal-reviews">(289 reviews)</span></div>
+                    <div
+                        class="meal-picture-specifications d-flex justify-content-around align-items-center text-center w-100 bg-white rounded-4 py-4 ">
+                        <div class="specifications-container d-flex flex-column gap-1">
+                            <i class="fa-solid fa-clock fs-4 text-danger opacity-75"></i>
+                            <p class="text-secondary fw-bolder m-0 ">Prep Time</p>
+                            <p class="fw-bolder m-0 " id="meal-prep-time">20 min</p>
+                        </div>
+                        <div class="specifications-container d-flex flex-column gap-1">
+                            <i class="fa-solid fa-fire-burner fs-4 text-danger"></i>
+                            <p class="text-secondary fw-bolder m-0 ">Cook Time</p>
+                            <p class="fw-bolder m-0 " id="meal-cook-time">30 min</p>
+                        </div>
+                        <div class="specifications-container d-flex flex-column gap-1">
+                            <i class="fa-solid fa-users fs-4 text-primary"></i>
+                            <p class="text-secondary fw-bolder m-0 ">Servings</p>
+                            <p class="fw-bolder m-0 " id="meal-serving-people">4 people</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="description col-lg-7 col-sm-12 bg-white  rounded-end-4 p-5">
+                    <div
+                        class="meal-description d-sm-block d-lg-flex d-md-flex justify-content-between align-items-center">
+
+                        <div class="meal-description-container d-flex gap-2 text-end m-2 order-1">
+                            <button
+                                class="btn text-danger bg-warning bg-opacity-25 p-3 rounded-4 icon-link icon-link-hover"><i
+                                    class="fa-solid fa-bookmark fs-4"></i></button>
+                            <button
+                                class="btn text-danger bg-warning bg-opacity-25 p-3 rounded-4 icon-link icon-link-hover"><i
+                                    class="fa-solid fa-share-nodes fs-4"></i></button>
+                        </div>
+
+                        <div class="meal-description-container">
+                            <ul class="list-group d-flex flex-row gap-3">
+                                <li class="list-group-numbered"><span
+                                        class="badge text-success bg-success bg-opacity-25  rounded-pill" id="meal-difficulty">Easy</span>
+                                </li>
+                                <li class="list-group-numbered"><span
+                                        class="badge text-primary bg-primary bg-opacity-25  rounded-pill" id="meal-nationality">Italian</span>
+                                </li>
+                            </ul>
+                            <h1 class="fw-bolder  mt-1" id="meal-name">Creamy Spaghetti Carbonara</h1>
+                            <p class="text-secondary fw-bolder " id="meal-description">A classic Italian pasta dish with eggs, cheese, and
+                                pancetta</p>
+                        </div>
+                    </div>
+                    <div id="warning"
+                        class="warning d-none  border-start border-4 border-danger d-flex rounded-3 p-3 gap-3 justify-content-center align-items-center bg-danger bg-opacity-10">
+                        <i class="fa-solid fa-triangle-exclamation text-danger fs-5"></i>
+                        <div>
+                            <h5 class=" text-danger-emphasis m-0">Extended Preparation Time</h5>
+                            <p class="text-danger fw-medium m-0">This recipe requires more than 45 minutes to
+                                prepare. Plan accordingly!</p>
+                        </div>
+                    </div>
+                    <div class="meal-specification-container  my-4 ">
+                        <ul class="list-group-horizontal d-flex gap-3 justify-content-evenly p-0">
+                            <li class="list-group-item list-group-item-light"><button id="ingredients-button" class="fw-bolder"><i
+                                        class="fa-solid fa-list-check"></i>
+                                    Ingredients</button></li>
+                            <li class="list-group-item list-group-item-light"><button id="instructions-button" class="fw-bolder"><i
+                                        class="fa-solid fa-book-open"></i>
+                                    Instructions</button></li>
+                            <li class="list-group-item list-group-item-light"><button id="nutrition-button" class="fw-bolder"><i
+                                        class="fa-solid fa-chart-pie"></i>
+                                    Nutrition</button></li>
+                            <li class="list-group-item list-group-item-light "><button id="chef-tips-button" class="fw-bolder"><i
+                                        class="fa-solid fa-lightbulb"></i> Chef's
+                                    Tips</button></li>
+                        </ul>
+
+                        <div id="listOfEvents" class="listOfEvents border-top border-bottom border-2 border-secondary">
+                            <div id="ingredients" class="ingredients m-2 p-2 bg-warning bg-opacity-10 rounded-4 d-none"></div>
+
+                            <div id="instructions" class="instructions m-2 p-2  rounded-4 d-flex flex-column gap-3 d-none"></div>
+
+                            <div id="nutrition" class="nutrition py-3  rounded-4 d-none">
+                                <div class="row g-3">
+                                    <div class="item-container col-lg-6 col-md-12 col-sm-12">
+                                        <div
+                                            class="inner  p-2 rounded-4 bg-body-secondary d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-3 p-1 align-items-center">
+                                                <i
+                                                    class="fa-solid fa-fire text-danger bg-warning rounded-3 align-self-center bg-opacity-25 p-2"></i>
+                                                <p class="fw-bolder m-0">Calories</p>
+                                            </div>
+                                            <h5 class="fw-bolder m-0" id="calories"></h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-container col-lg-6 col-md-12 col-sm-12">
+                                        <div
+                                            class="inner  p-2 rounded-4 bg-body-secondary d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-3 p-1 align-items-center">
+                                                <i
+                                                    class="fa-solid fa-dumbbell text-primary bg-primary-subtle rounded-3 align-self-center bg-opacity-25 p-2"></i>
+                                                <p class="fw-bolder m-0" >Protein</p>
+                                            </div>
+                                            <h5 class="fw-bolder m-0" id="protein"></h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-container col-lg-6 col-md-12 col-sm-12">
+                                        <div
+                                            class="inner  p-2 rounded-4 bg-body-secondary d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-3 p-1 align-items-center">
+                                                <i
+                                                    class="fa-solid fa-wheat-awn text-warning bg-warning-subtle rounded-3 align-self-center bg-opacity-25 p-2"></i>
+                                                <p class="fw-bolder m-0" >Carbohydrates</p>
+                                            </div>
+                                            <h5 class="fw-bolder m-0" id="carbohydrates"></h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-container col-lg-6 col-md-12 col-sm-12">
+                                        <div
+                                            class="inner  p-2 rounded-4 bg-body-secondary d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-3 p-1 align-items-center">
+                                                <i
+                                                    class="fa-solid fa-droplet text-danger bg-danger rounded-3 align-self-center bg-opacity-25 p-2"></i>
+                                                <p class="fw-bolder m-0" >Fat</p>
+                                            </div>
+                                            <h5 class="fw-bolder m-0" id="fat"></h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-container col-lg-6 col-md-12 col-sm-12">
+                                        <div
+                                            class="inner  p-2 rounded-4 bg-body-secondary d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-3 p-1 align-items-center">
+                                                <i
+                                                    class="fa-solid fa-seedling text-success bg-success rounded-3 align-self-center bg-opacity-25 p-2"></i>
+                                                <p class="fw-bolder m-0" >Fiber</p>
+                                            </div>
+                                            <h5 class="fw-bolder m-0" id="fiber"></h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item-container col-lg-6 col-md-12 col-sm-12">
+                                        <div
+                                            class="inner  p-2 rounded-4 bg-body-secondary d-flex justify-content-between align-items-center">
+                                            <div class="d-flex gap-3 p-1 align-items-center">
+                                                <i
+                                                    class="fa-solid fa-cube text-danger bg-danger rounded-3 align-self-center bg-opacity-10 p-2"></i>
+                                                <p class="fw-bolder m-0">Sodium</p>
+                                            </div>
+                                            <h5 class="fw-bolder m-0" id="sodium"></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="chef-tips" class="chef-tips m-2 p-2  rounded-4 d-flex flex-column gap-3 d-none"></div>
+                        </div>
+                    </div>
+                    <div class="refresh-button">
+                        <button id="refresh-button" class="btn btn-danger py-2 fw-bolder rounded-3"><i class="fa-solid fa-refresh text-white"></i>  Try Another Recipe</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- Bootstrap js -->
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

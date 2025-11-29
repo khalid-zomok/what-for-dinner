@@ -1,0 +1,139 @@
+.picture-container {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.header-icon i {
+    cursor: pointer;
+    transition: all 0.1s;
+    color: rgba(74, 85, 101, 1);
+}
+
+.meal-picture {
+    /* background-image: url(../images/1.jpeg); */
+    background-position: center;
+    background-size: cover;
+    filter: blur(0.5px);
+}
+
+.header-icon i:hover {
+    color: rgba(255, 77, 26, 1);
+}
+
+body {
+    background-color: rgba(255, 248, 236, 1);
+}
+
+.meal-picture,
+.description {
+    height: 800px;
+}
+
+.meal-description-container {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: .9rem;
+    }
+}
+
+.meal-specification-container button {
+    border: 2px solid transparent;
+    color: gray;
+    background-color: transparent;
+}
+
+
+.meal-specification-container button.active {
+    border-bottom: 2px solid rgba(225, 113, 0, 1);
+    color: red;
+}
+
+.instructions {
+    height: 350px;
+    overflow-y: auto;
+}
+
+.ingredients {
+    height: 350px;
+    overflow-y: auto;
+}
+
+.nutrition {
+    height: 350px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.chef-tips {
+    height: 350px;
+    overflow-y: auto;
+}
+
+/* .listOfEvents {
+    max-height: 500px;
+} */
+
+.ingredients p i {
+    font-size: 0.75rem;
+}
+
+.refresh-button button {
+    transition: all 0.5s;
+}
+
+.refresh-button button:hover {
+    transform: scale(1.1);
+}
+
+/* .meal-description-container h1{
+
+    font-size: 2.1vw;
+
+}
+.meal-description-container p{
+    font-size: 1vw;
+} */
+
+@media (max-width:992px) {
+    .meal-picture {
+        height: 400px;
+    }
+
+    .description {
+        height: 100%;
+    }
+
+    .meal-specification-container button {
+        border: 2px solid transparent;
+        color: gray;
+        background-color: transparent;
+        font-size: .6rem;
+
+
+    }
+
+    .instructions {
+        font-size: 0.75rem;
+    }
+
+    .warning {
+        h5 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.75rem;
+        }
+    }
+
+    .chef-tips {
+        p {
+            font-size: 0.75rem;
+        }
+    }
+
+}
